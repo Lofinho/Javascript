@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=https://twitter.com/videoscortes/status/1578119917886472210?s=20&t=9VghFeX98LfY-mNKCUMI_w, initial-scale=1.0"
+        />
+        <title>Document</title>
+        <style>
+            input[type='number']::-webkit-inner-spin-button,
+            input[type='number']::-webkit-outer-spin-button {
+                -webkit-appearance: none;
+            }
+
+            input{
+                outline: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sistema de Multas</h1>
+        <label for="txtvelocidade">Velocidade do Carro:</label>
+        <input type="number" name="txtvelocidade" id="txtvelocidade" />
+        <input type="button" value="Verificar" onclick="calcular()" />
+        <div id="resultado"></div>
+
+        <script>
+            function calcular() {
+                var velocidade = document.querySelector('#txtvelocidade')
+                var resultado = document.querySelector('#resultado')
+                var velocidade = Number(txtvelocidade.value)
+                resultado.innerHTML = `<p>Sua velocidade atual é de <strong>${velocidade}km/h</strong></p>`
+                if (velocidade > 60 && velocidade <= 80) {
+                    resultado.innerHTML += `<p>Você recebeu uma <strong>MULTA LEVE</strong> por excesso de velocidade.</p>`
+                }
+                if (velocidade > 80 && velocidade <= 100) {
+                    resultado.innerHTML += `<p>Você recebeu uma <strong>MULTA GRAVE</strong> por excesso de velocidade</p>`
+                }
+                if (velocidade > 100) {
+                    resultado.innerHTML +=`<p>Você recebeu uma <strong>MULTA GRAVÍSSIMA</strong> por excesso de velocidade</p>`
+                }
+                resultado.innerHTML +=
+                    '<p>Dirija sempre com o cinto de segurança.</p>'
+            }
+        </script>
+    </body>
+</html>

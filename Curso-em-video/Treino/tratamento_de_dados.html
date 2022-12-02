@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        var salario = prompt('Qual é o seu salário atualmente ?')
+        var horas_trabalhadas_por_mes = prompt('Quantas horas você trabalha por mês ?')
+        var ganho_por_hora = salario / horas_trabalhadas_por_mes
+        var ganho_em_dolar = salario / 5.37
+        var ganho_em_euro = salario / 5.16
+
+        salario = Number.parseFloat(salario)
+        horas_trabalhadas_por_mes = Number.parseInt(horas_trabalhadas_por_mes)
+        ganho_por_hora = Number.parseFloat(ganho_por_hora)
+
+        document.write(
+            `Você ganha atualmente ${ganho_por_hora.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'BRL'
+            })} por hora <br/>`
+        )
+
+        document.write(
+            `Seu salário em Dólar seria ${ganho_em_dolar.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'USD'
+            })} <br/>`
+        )
+
+        document.write(
+            `Seu salário em Euro seria ${ganho_em_euro.toLocaleString('pt-BR', {
+                style: 'currency',
+                currency: 'EUR'
+            })} <br/>`
+        )
+    </script>
+</body>
+</html>

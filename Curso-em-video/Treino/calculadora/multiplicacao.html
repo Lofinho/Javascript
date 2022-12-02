@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div .input {
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-block: 10px;
+            }
+
+            #multiplicacao{
+                margin: 10px;
+                padding: 16px;
+            }
+
+            .input input {
+                width: 100px;
+                height: 40px;
+                font-size: 32px;
+            }
+
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+
+            .operadores {
+                font-weight: bold;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="multiplicacao">
+            <h1>Calculadora de Multiplicação</h1>
+            <div class="input">
+                <input type="number" name="inputn1" class="inputn1" />
+                <span class="operador">*</span>
+                <input type="number" name="inputn2" class="inputn2" />
+            </div>
+            <input type="button" value="Calcular" onclick="multiplicar()" />
+            <div class="input resultado3">Resultado</div>
+        </div>
+
+        <script>
+            function multiplicar() {
+                var n1 = document.querySelector('.inputn1')
+                var n2 = document.querySelector('.inputn2')
+                var n1 = Number(n1.value)
+                var n2 = Number(n2.value)
+                var resultado = document.querySelector('.resultado3')
+                var multiplica = n1 * n2
+                resultado.innerHTML = `${multiplica}`
+            }
+        </script>
+
+</body>
+</html>

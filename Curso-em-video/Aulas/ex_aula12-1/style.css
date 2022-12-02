@@ -1,0 +1,40 @@
+body {
+    background: rgb(70, 142, 236);
+    font: normal 16px arial;
+}
+
+header {
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    color: #fff;
+    text-align: center;
+    font-style: italic;
+    padding: 24px;
+}
+
+.img-circular {
+    width: 250px;
+    height: 250px;
+}
+
+#resultado {
+    text-align: center;
+}
+
+#resultado img {
+    width: 300px;
+    height: 300px;
+    margin: 16px;
+}

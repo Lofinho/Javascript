@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 24px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #00f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="caixa">
+        Interaja...
+    </div>
+
+    <script>
+        var caixa_azul = document.getElementById('caixa')
+        caixa_azul.addEventListener('click', clicar)
+        caixa_azul.addEventListener('mouseover', entrou)
+        caixa_azul.addEventListener('mouseout', saiu)
+
+        function clicar() {
+            caixa_azul.innerText = 'Clicou'
+            caixa_azul.style.background = '#f00'
+        }
+
+        function entrou() {
+            caixa_azul.innerText = 'Entrou'
+            caixa_azul.style.background = '#0f0'
+        }
+
+        function saiu() {
+            caixa_azul.innerText = 'Saiu'
+            caixa_azul.style.background = '#00f'
+        }
+    </script>
+
+</body>
+</html>

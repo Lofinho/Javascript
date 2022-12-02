@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Primeiros passos com DOM</title>
+</head>
+<body>
+    
+    <h1>Iniciando estudos DOM</h1>
+    <p>aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+    <div name="msg">Clique em mim</div>
+    <div class="msg">Clique em mim</div>
+    <div class="query">Esse é um Query Selector</div>
+
+
+
+
+    <script>
+
+        // POR MARCA
+
+        var corpo = window.document.body
+        var texto = window.document.getElementsByTagName('body')[0]
+        var p_marca = window.document.getElementsByTagName('p')[1]
+
+        // document.write(p_marca.innerHTML)
+        corpo.style.background = 'black'
+        texto.style.color = 'white'
+
+        // POR ID
+        var div_id = window.document.getElementById('msg')
+        div_id.style.background = 'green'
+        div_id.innerText = 'Estou aguardandn'
+
+        // POR NOME
+        var div_name = window.document.getElementsByName('msg')[0]
+        div_name.innerText = 'Olá'
+
+        // POR CLASSE
+        var div_class = window.document.getElementsByClassName('msg')[0]
+        div_class.innerText = 'Tudo bem'
+
+        // POR SELETOR
+        var query = window.document.querySelector('div.query')
+        query.style.background = 'blue'
+    </script>
+</body>
+</html>

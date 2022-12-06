@@ -2,11 +2,22 @@
 
 let usuario, senha
 
-while(usuario == senha){
-  usuario = prompt('Digite seu Login')
-  senha = prompt('Digite a sua senha')
+// while(usuario == senha){
+//   usuario = prompt('Digite seu Login')
+//   senha = prompt('Digite a sua senha')
   
-  if(usuario == senha){
-    alert('ERRO, a senha não pode ser igual ao usuário');
+//   if(usuario == senha){
+//     alert('ERRO, a senha não pode ser igual ao usuário');
+//   }
+// }
+
+
+while(!(usuario = '')){
+  usuario = prompt('Digite seu Login')
+
+  if((usuario == '')){
+    alert('Login inválido')
+  }else{
+    break
   }
 }
